@@ -1,5 +1,5 @@
 <script setup>
-import { onMounted, reactive } from 'vue'
+import {onMounted, reactive} from 'vue'
 import StarTrails from './components/StarTrails.vue'
 
 const data = reactive({
@@ -21,74 +21,38 @@ const data = reactive({
   ],
   navLinks: [{
     name: '博 客',
-    link: 'https://blog.sunguoqi.com',
-  }, {
-    name: '影 集',
-    link: 'https://camera.sunguoqi.com',
-  }, {
-    name: '运 动',
-    link: 'https://bicycling.sunguoqi.com',
+    link: 'https://01petard.github.io/blog-vue-vitepress/',
   }, {
     name: '留 言',
-    link: 'https://blog.sunguoqi.com/comments',
+    link: 'https://01petard.github.io/messageboard/',
   }],
 
   myProjects: [{
     name: 'Home',
     description: '个人简介、主页、引导页',
-    link: 'https://github.com/sun0225SUN/home',
+    link: 'https://github.com/01Petard/',
   }, {
     name: 'Blog',
     description: '个人博客，学习&随笔',
-    link: 'https://github.com/sun0225SUN/blog',
+    link: 'https://01petard.github.io/',
   }, {
     name: 'Brain',
     description: '知识库、第二大脑',
-    link: 'https://github.com/sun0225SUN/brain',
-  }, {
-    name: 'Camera',
-    description: '摄影相册',
-    link: 'https://github.com/sun0225SUN/camera',
-  }, {
-    name: 'Camera Tools',
-    description: '摄影工具箱',
-    link: 'https://github.com/sun0225SUN/camera-tools',
-  }, {
-    name: 'Bicycling',
-    description: '骑行主页',
-    link: 'https://github.com/sun0225SUN/bicycling',
-  }, {
-    name: 'Life Map',
-    description: '人生地图、点亮足迹',
-    link: 'https://github.com/sun0225SUN/life-map',
-  }, {
-    name: 'Coder',
-    description: '闪闪发光的程序们',
-    link: 'https://github.com/sun0225SUN/coder',
-  }, {
-    name: 'Starter',
-    description: '前端项目起手架模版',
-    link: 'https://github.com/sun0225SUN/starter',
+    link: 'https://01petard.github.io/blog-vue-vitepress/',
   }],
 
   socialLinks: [{
     icon: '<i i-ant-design-github-outlined />',
-    link: 'https://github.com/sun0225SUN',
+    link: 'https://github.com/01Petard/',
     label: 'Github',
   }, {
-    icon: '<i i-ant-design-x-outlined />',
-    link: 'https://twitter.com/sun0225SUN',
-    label: 'Twitter',
-  }, {
-    icon: '<i i-ant-design-youtube-outlined />',
-    link: 'https://youtube.com/@sun0225SUN',
-    label: 'YouTube',
-  }, {
     icon: '<i i-ant-design-bilibili-outlined />',
-    link: 'https://space.bilibili.com/448488855/',
+    link: 'https://space.bilibili.com/12764212/',
     label: 'Bilibili',
   }],
 })
+
+const avatar = 'https://cdn.jsdelivr.net/gh/01Petard/imageURL@main/img/202503221816953.png'
 
 onMounted(() => {
   // 背景固定
@@ -117,15 +81,15 @@ onMounted(() => {
   <main bg-transparent absolute w-full top-75vh z-10>
     <!-- 大标题 -->
     <section ml-15vw absolute>
-      <div text-10 text-white font-bold tracking-widest v-html="data.titleList[Math.floor(Math.random() * data.titleList.length)]" />
+      <div text-10 text-white font-bold tracking-widest v-html="data.titleList[Math.floor(Math.random() * data.titleList.length)]"/>
       <div flex items-center>
         <div mr-4 flex gap-2>
-          <div bg-red rounded-full h-3 w-3 />
-          <div bg-yellow rounded-full h-3 w-3 />
-          <div bg-green rounded-full h-3 w-3 />
+          <div bg-red rounded-full h-3 w-3/>
+          <div bg-yellow rounded-full h-3 w-3/>
+          <div bg-green rounded-full h-3 w-3/>
         </div>
         <div text-4 text-white tracking-widest>
-          小孙同学祝您今天快乐
+          天天快乐
         </div>
       </div>
     </section>
@@ -138,10 +102,10 @@ onMounted(() => {
       <div mx-10 mb-10 flex justify-between>
         <div class="text-white/80">
           <p leading-10>
-            嗨，你好，我是小孙同学。
+            嗨，你好，我是小黄同学。热爱编程、数码、游戏。
           </p>
           <p leading-10>
-            热爱编程、摄影、读书、旅行。
+            热爱软件工程和 IT 互联网事业，希望能成为一名优秀的开发者。
           </p>
           <p leading-10>
             热爱计算机科学和 IT 互联网事业，希望能成为一名优秀的开发者。
@@ -153,7 +117,7 @@ onMounted(() => {
             We're making the world a better place. Through constructing elegant hierarchies for maximum code reuse and extensibility.
           </p>
         </div>
-        <img hidden rounded-full h-25 w-25 transition md:block hover:-translate-y--2 src="./assets/images/avatar.webp" alt="avatar">
+        <img hidden rounded-full h-25 w-25 transition md:block hover:-translate-y--2 :src="avatar" alt="avatar">
       </div>
 
       <!-- 我的技能 -->
@@ -185,9 +149,10 @@ onMounted(() => {
         Find Me
       </div>
       <div flex flex-wrap justify-between>
-        <div v-for="(item, index) in data.socialLinks" :key="index" mx-10 my-4 class="basis-1/6">
-          <a class="bg-white/5 hover:bg-white/10" p-2 rounded-lg shadow-md flex-col justify-between items-center transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2 :href="item.link">
-            <div mb-1 text-white f-c-c v-html="item.icon" />
+        <div v-for="(item, index) in data.socialLinks" :key="index" mx-10 my-4 class="basis-1/4">
+          <a class="bg-white/5 hover:bg-white/10" p-2 rounded-lg shadow-md flex-col justify-between items-center transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100
+             hover:-translate-y-2 :href="item.link">
+            <div mb-1 text-white f-c-c v-html="item.icon"/>
             <div text-bold opacity-75 text-white>{{ item.label }}</div>
           </a>
         </div>
@@ -197,13 +162,13 @@ onMounted(() => {
     <!-- 底部 -->
     <footer mb-5>
       <div class="text-white/60" mt-50 f-c-c>
-        <i i-ant-design-environment-outlined mr-1 />
+        <i i-ant-design-environment-outlined mr-1/>
         <p>路虽远行则将至，事虽难做则必成</p>
-        <i i-ant-design-environment-outlined ml-1 />
+        <i i-ant-design-environment-outlined ml-1/>
       </div>
       <div class="text-white/60" mt-2 f-c-c gap-4>
-        <div>皖 ICP 备 2021010058 号</div>
-        <div>© 2024 小孙同学</div>
+        <div>浙 ICP 备 2021010058 号</div>
+        <div>© 2024 小黄同学</div>
       </div>
     </footer>
   </main>
@@ -211,9 +176,9 @@ onMounted(() => {
   <!-- 背景 -->
   <div id="background" absolute wh-full left-0 top-0 z-0>
     <!-- 渐变阴影 -->
-    <div to-black-500 absolute h-80vh w-full bottom--30vh left-0 from-black bg-gradient-to-t />
+    <div to-black-500 absolute h-80vh w-full bottom--30vh left-0 from-black bg-gradient-to-t/>
     <!-- 星轨背景 -->
-    <StarTrails pb-45vh bg-black />
+    <StarTrails pb-45vh bg-black/>
   </div>
 </template>
 
