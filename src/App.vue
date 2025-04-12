@@ -19,27 +19,29 @@ const data = reactive({
     '一望无际的迷雾中<br/>有人在寻找光明',
     '当你在凝视着网页的时候<br/>网页也正在凝视着你',
   ],
-  navLinks: [{
-    name: '博 客',
-    link: 'https://01petard.github.io/blog-vue-vitepress/',
-  }, {
-    name: '留 言',
-    link: 'https://01petard.github.io/messageboard/',
-  }],
+  // navLinks: [{
+  //   name: '博 客',
+  //   link: 'https://01petard.github.io/blog-vue-vitepress/',
+  // }, {
+  //   name: '留 言',
+  //   link: 'https://01petard.github.io/messageboard/',
+  // }],
 
   myProjects: [{
     name: 'Home',
     description: '个人简介、主页、引导页',
     link: 'https://github.com/01Petard/',
-  }, {
-    name: 'Blog',
-    description: '个人博客，学习&随笔',
-    link: 'https://01petard.github.io/',
-  }, {
-    name: 'Brain',
-    description: '知识库、第二大脑',
-    link: 'https://01petard.github.io/blog-vue-vitepress/',
-  }],
+  },
+  //   {
+  //   name: 'Blog',
+  //   description: '个人博客，学习&随笔',
+  //   link: 'https://01petard.github.io/',
+  // }, {
+  //   name: 'Brain',
+  //   description: '知识库、第二大脑',
+  //   link: 'https://01petard.github.io/blog-vue-vitepress/',
+  // }
+  ],
 
   socialLinks: [{
     icon: '<i i-ant-design-github-outlined />',
@@ -159,18 +161,18 @@ onMounted(() => {
       </div>
     </section>
 
-    <!-- 底部 -->
-    <footer mb-5>
-      <div class="text-white/60" mt-50 f-c-c>
-        <i i-ant-design-environment-outlined mr-1/>
-        <p>路虽远行则将至，事虽难做则必成</p>
-        <i i-ant-design-environment-outlined ml-1/>
-      </div>
-      <div class="text-white/60" mt-2 f-c-c gap-4>
-        <div>浙 ICP 备 2021010058 号</div>
-        <div>© 2024 小黄同学</div>
-      </div>
-    </footer>
+<!--    &lt;!&ndash; 底部 &ndash;&gt;-->
+<!--    <footer mb-5>-->
+<!--      <div class="text-white/60" mt-50 f-c-c>-->
+<!--        <i i-ant-design-environment-outlined mr-1/>-->
+<!--        <p>路虽远行则将至，事虽难做则必成</p>-->
+<!--        <i i-ant-design-environment-outlined ml-1/>-->
+<!--      </div>-->
+<!--      <div class="text-white/60" mt-2 f-c-c gap-4>-->
+<!--        <div>浙 ICP 备 2021010058 号</div>-->
+<!--        <div>© 2024 小黄同学</div>-->
+<!--      </div>-->
+<!--    </footer>-->
   </main>
 
   <!-- 背景 -->
