@@ -167,8 +167,14 @@ onMounted(() => {
         <i i-ant-design-environment-outlined ml-1/>
       </div>
       <div class="text-white/60" mt-2 f-c-c gap-4>
-        <div>浙ICP备2024084383号</div>
-        <div>©2025 小黄同学</div>
+        <div>
+          <a href="https://beian.mps.gov.cn/#/" style="color: #999999" target="_blank">
+            浙ICP备2024084383号
+          </a>
+        </div>
+        <div>
+          ©2025 小黄同学
+        </div>
       </div>
     </footer>
   </main>
