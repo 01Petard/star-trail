@@ -167,8 +167,8 @@ onMounted(() => {
         <i i-ant-design-environment-outlined ml-1/>
       </div>
       <div class="text-white/60" mt-2 f-c-c gap-4>
-        <div>浙 ICP 备 2021010058 号</div>
-        <div>© 2024 小黄同学</div>
+        <div>浙ICP备2024084383号</div>
+        <div>©2025 小黄同学</div>
       </div>
     </footer>
   </main>
