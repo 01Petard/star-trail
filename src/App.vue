@@ -168,7 +168,7 @@ onMounted(() => {
       </div>
       <div class="text-white/60" mt-2 f-c-c gap-4>
         <div>
-          <a href="https://beian.mps.gov.cn/#/" style="color: #999999" target="_blank">
+          <a href="https://beian.miit.gov.cn/" style="color: #999999" target="_blank">
             浙ICP备2024084383号
           </a>
         </div>
