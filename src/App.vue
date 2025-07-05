@@ -28,20 +28,28 @@ const data = reactive({
   }],
 
   myProjects: [{
-    name: 'Home',
-    description: '个人简介、主页、引导页',
-    link: 'https://github.com/01Petard/',
+    name: 'RAG知识库应用',
+    description: 'AI志愿填报顾问',
+    link: 'https://www.codebox.icu:8888/',
+  },{
+    name: 'Pintree收藏夹',
+    description: '配置型个人收藏夹',
+    link: 'https://01petard.github.io/Pintree-fav/',
   }, {
-    name: 'Blog',
-    description: '个人博客，学习&随笔',
-    link: 'https://01petard.github.io/',
-  }, {
-    name: 'Brain',
-    description: '知识库、第二大脑',
+    name: '代码港湾',
+    description: '个人知识库，学习&随笔',
     link: 'https://01petard.github.io/blog-vue-vitepress/',
+  }, {
+    name: '花火の红玉宫',
+    description: '旧时博客',
+    link: 'https://01petard.github.io/',
   }],
 
   socialLinks: [{
+    icon: '<i i-ant-design-user-outlined />',
+    link: 'https://www.codebox.icu/',
+    label: 'Star-Trail',
+  }, {
     icon: '<i i-ant-design-github-outlined />',
     link: 'https://github.com/01Petard/',
     label: 'Github',
