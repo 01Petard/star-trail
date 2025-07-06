@@ -1,6 +1,7 @@
 <script setup>
 import {onMounted, reactive} from 'vue'
 import StarTrails from './components/StarTrails.vue'
+import MiniPlayer from '@/components/MiniPlayer.vue'
 
 const data = reactive({
   titleList: [
@@ -112,6 +113,9 @@ onMounted(() => {
       <!-- 关于我 -->
       <div text-bold mb-4 ml-10 text-8 text-white>
         About Me
+      </div>
+      <div>
+        <MiniPlayer src="/mengdenglong.mp3" title="梦灯笼" />
       </div>
       <div mx-10 mb-10 flex justify-between>
         <div class="text-white/80">

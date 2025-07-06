@@ -7,6 +7,7 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    MiniPlayer: typeof import('./src/components/MiniPlayer.vue')['default']
     StarTrails: typeof import('./src/components/StarTrails.vue')['default']
   }
 }
