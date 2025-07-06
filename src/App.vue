@@ -31,11 +31,17 @@ const data = reactive({
     name: 'RAG知识库应用',
     description: 'AI志愿填报顾问',
     link: 'https://www.codebox.icu:8888/',
-  },{
+  }, {
+    name: 'AI Hub',
+    description: 'AI应用中心',
+    link: 'https://www.codebox.icu:5173/',
+  }, {
     name: 'Pintree收藏夹',
     description: '配置型个人收藏夹',
     link: 'https://01petard.github.io/Pintree-fav/',
-  }, {
+  }],
+
+  myBlogs: [{
     name: '代码港湾',
     description: '个人知识库，学习&随笔',
     link: 'https://01petard.github.io/blog-vue-vitepress/',
@@ -134,11 +140,38 @@ onMounted(() => {
         </div> -->
 
       <!-- 我的项目 -->
+      <!-- Projects -->
       <div text-bold mb-2 ml-10 text-8 text-white>
         Projects
       </div>
-      <div mb-10 flex flex-wrap justify-between>
-        <div v-for="(item, index) in data.myProjects" :key="index" mx-10 my-4 class="basis-3/4 md:basis-1/6">
+      <div grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10 mx-10>
+        <div
+          v-for="(item, index) in data.myProjects"
+          :key="index"
+        >
+          <a :href="item.link">
+            <div class="bg-white/5 hover:bg-white/10" p-2 rounded-lg shadow-md flex-col transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2>
+              <div text-bold opacity-75 text-white>
+                {{ item.name }}
+              </div>
+              <div mt-1 opacity-50 text-3 text-white>
+                {{ item.description }}
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 我的博客 -->
+      <!-- Blogs -->
+      <div text-bold mb-2 ml-10 text-8 text-white>
+        Blogs
+      </div>
+      <div grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-10 mx-10>
+        <div
+          v-for="(item, index) in data.myBlogs"
+          :key="index"
+        >
           <a :href="item.link">
             <div class="bg-white/5 hover:bg-white/10" p-2 rounded-lg shadow-md flex-col transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2>
               <div text-bold opacity-75 text-white>
@@ -153,6 +186,7 @@ onMounted(() => {
       </div>
 
       <!-- 社交链接 -->
+      <!--   水平居中   -->
       <div text-bold mb-2 ml-10 text-8 text-white>
         Find Me
       </div>
@@ -165,7 +199,27 @@ onMounted(() => {
           </a>
         </div>
       </div>
-    </section>
+
+      <!--  左对齐    -->
+      <!--      &lt;!&ndash; Find Me &ndash;&gt;-->
+      <!--      <div text-bold mb-2 ml-10 text-8 text-white>-->
+      <!--        Find Me-->
+      <!--      </div>-->
+      <!--      <div grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mx-10 mb-10>-->
+      <!--        <div-->
+      <!--          v-for="(item, index) in data.socialLinks"-->
+      <!--          :key="index"-->
+      <!--        >-->
+      <!--          <a-->
+      <!--            :href="item.link"-->
+      <!--            class="flex flex-col items-center justify-between p-2 rounded-lg shadow-md bg-white/5 hover:bg-white/10 transition backdrop-blur-3xl backdrop-opacity-60 hover:backdrop-opacity-100 hover:-translate-y-2"-->
+      <!--          >-->
+      <!--            <div class="mb-1 text-white f-c-c" v-html="item.icon"></div>-->
+      <!--            <div class="text-white text-sm font-bold opacity-75">{{ item.label }}</div>-->
+      <!--          </a>-->
+      <!--        </div>-->
+      <!--      </div>-->
+          </section>
 
     <!-- 底部 -->
     <footer mb-5>
