@@ -83,7 +83,7 @@ onMounted(() => {
     showContext.rotate(0.025 * Math.PI / 180)
   }
 
-  let count = 18000
+  let count = 30000
 
   while (count--)
     stars.push(createStar())
